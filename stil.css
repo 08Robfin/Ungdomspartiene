@@ -1,0 +1,309 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+
+.issue {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.issue-image {
+    max-height: 100px; /* Gjør bildene responsive */
+    border-radius: 5px;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.party-circles-container {
+    display: flex; /* Bruk flexbox for å plassere dem side om side */
+    justify-content: center; /* Sentere innholdet horisontalt */
+    flex-wrap: wrap; /* Lar dem gå til neste linje hvis plassen er liten */
+    margin: -50px 0px; /* Juster avstand over og under */
+}
+
+.party-circle {
+    width: 250px;
+    height: 250px;
+    color: #007bff; /* Sett teksten til en farge (f.eks. blå) */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px; /* Legg til litt margin mellom sirklene */
+    text-align: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Legg til box-shadow for "lyse"-effekten */
+    position: relative; /* For hover-effekt */
+}
+
+.party-logo {
+    max-width: 70%; /* Begrenser bredden på logoene */
+    max-height: 70%; /* Begrenser høyden på logoene */
+    transition: transform 0.2s; /* For jevn zoom-effekt */
+}
+
+.party-circle.auf {
+    background-color: white; /* Endre bakgrunnsfarge til hvit */
+}
+
+.party-circle.su {
+    background-color: white; /* Endre bakgrunnsfarge til hvit */
+}
+
+.party-circle.unge-hoyre {
+    background-color: white; /* Endre bakgrunnsfarge til hvit */
+}
+
+.party-circle.fpu {
+    background-color: white; /* Endre bakgrunnsfarge til hvit */
+}
+
+.party-circle.auf:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #DB1D0E; /* Farge ved hover */
+}
+
+.party-circle.su:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #DA2115; /* Farge ved hover */
+}
+
+.party-circle.unge-hoyre:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #0063EF; /* Farge ved hover */
+}
+
+.party-circle.fpu:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #003583; /* Farge ved hover */
+}
+
+button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Specific button colors for each party */
+.button.auf {
+    background-color: #ff1100; /* AUF Color */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Legg til box-shadow for "lyse"-effekten */
+}
+
+.button.su {
+    background-color: #ff1100; /* SU Color */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Legg til box-shadow for "lyse"-effekten */
+}
+
+.button.unge-hoyre {
+    background-color: #0063EF; /* Unge Høyre Color */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Legg til box-shadow for "lyse"-effekten */
+}
+
+.button.fpu {
+    background-color: #0063EF; /* Unge Høyre Color */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Legg til box-shadow for "lyse"-effekten */
+}
+
+/* Hover effects */
+
+.button.auf:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff0000; /* Farge ved hover */
+}
+
+.button.su:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff0000; /* Farge ved hover */
+}
+
+
+.button.unge-hoyre:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #0015ff; /* Farge ved hover */
+}
+
+.button.fpu:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #0015ff; /* Farge ved hover */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+section {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section-su {
+    box-shadow: 0 0px 20px rgba(255, 0, 0, 0.203);
+}
+
+.section-auf {
+    box-shadow: 0 0px 20px rgba(255, 0, 0, 0.203); 
+}
+
+.section-unge-hoyre {
+    box-shadow: 0 0px 20px rgba(0, 106, 255, 0.203); 
+}
+
+.section-fpu {
+    box-shadow: 0 0px 20px rgba(0, 38, 255, 0.203); 
+}
+
+#liked-issues-popup {
+    z-index: 1000; /* Gjør så den er på toppen av alt */
+    top: 50%; /* Set to 50% for vertical centering */
+    left: 50%;
+    display: none; /* Start hidden */
+    position: fixed;
+    width: 20%;
+    max-height: 80vh; /* Set max height to 80% of the viewport height */
+    overflow-y: auto; /* Allow scrolling if content is too long */
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: red 0px 0px 20px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+#heart-icon {
+    display: flex;            /* Use flexbox for centering */
+    align-items: center;     /* Center vertically */
+    justify-content: center;  /* Center horizontally */
+    font-size: 24px;         /* Size of the heart icon */
+    cursor: pointer;         /* Change cursor on hover */
+    padding: 10px 15px;     /* Add padding for a better clickable area */
+    background-color: white; /* Background color */
+    border-radius: 15%;     /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Legg til box-shadow for "lyse"-effekten */
+}
+
+#heart-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff0000; /* Farge ved hover */
+}
+
+#close-liked{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#close-liked:hover{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b30000;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#stats-popup {
+    z-index: 1000;
+    top: 30%;
+    left: 50%;
+    display: none; /* Start hidden */
+    position: fixed;
+    width: 40%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 0px 20px red;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+#close-stats {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#close-stats:hover {
+    background-color: #b30000;
+}
+
+/* Grønn Ungdom (GU) */
+.section-gu {
+    box-shadow: 0 0px 20px rgba(0, 128, 0, 0.203); /* Grønn skygge */
+}
+
+.button.gu {
+    background-color: #00AA00; /* GU farge */
+}
+
+.button.gu:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00FF00; /* Farge ved hover */
+}
+
+/* KrFU */
+.section-krfu {
+    box-shadow: 0 0px 20px rgba(255, 215, 0, 0.203); /* Gullfarget skygge */
+}
+
+.button.krfu {
+    background-color: #FFD700; /* KrFU farge */
+}
+
+.button.krfu:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #FFFF00; /* Farge ved hover */
+}
+
+.party-circle.gu {
+    background-color: white;
+}
+
+.party-circle.krfu {
+    background-color: white;
+}
+
+.party-circle.gu:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #78c257; /* GU color */
+}
+
+.party-circle.krfu:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #f7d417; /* KrFU color */
+}

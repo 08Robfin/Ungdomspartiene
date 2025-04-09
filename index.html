@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ungdomspartiene</title>
+    <link rel="icon" type="image/x-icon" href="media/favicon.ico">
+    <link rel="stylesheet" href="stil.css"> <!-- Kobler til CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script> <!-- Kobler til JavaScript -->
+</head>
+<body>
+    <h1>Ungdomspartiene i Norge</h1>
+
+    <!-- Heart button -->
+<button id="heart-icon" style="font-size: 24px; cursor: pointer;" onclick="showLikedIssues()">❤️‍🔥</button>
+
+<!-- Popup for liked issues -->
+<div id="liked-issues-popup">
+    <div id="liked-issues"></div>
+    <button id="close-liked" onclick="closePopup()">Lukk</button>
+</div>
+
+<!-- Add this below the heart icon -->
+<button id="heart-icon" style="font-size: 24px; cursor: pointer;" onclick="showStats()">📊</button>
+
+<!-- Statistics Popup -->
+<div id="stats-popup" style="display:none;">
+    <canvas id="likes-chart"></canvas>
+    <button id="close-liked" onclick="closeStatsPopup()">Close</button>
+</div>
+
+    
+    <div class="party-circles-container">
+        <div class="party-circle su" onclick="location.href='su.html'">
+            <img src="media/Su-Logo.png" alt="SU Logo" class="party-logo">
+        </div>
+        <div class="party-circle gu" onclick="location.href='gu.html'">
+            <img src="media/gu-logo.png" alt="Grønn Ungdom Logo" class="party-logo">
+        </div>
+        <div class="party-circle auf" onclick="location.href='auf.html'">
+            <img src="media/auf-logo.png" alt="AUF Logo" class="party-logo">
+        </div>
+        <div class="party-circle krfu" onclick="location.href='krfu.html'">
+            <img src="media/krfu-logo.png" alt="KrFU Logo" class="party-logo">
+        </div>
+        <div class="party-circle unge-hoyre" onclick="location.href='unge_hoyre.html'">
+            <img src="media/UngeH-Logo.png" alt="Unge Høyre Logo" class="party-logo">
+        </div>
+        <div class="party-circle fpu" onclick="location.href='fpu.html'">
+            <img src="media/fpu-logo.png" alt="FpU Logo" class="party-logo">
+        </div>
+
+
+        
+        <!-- Legg til flere partier her med tilsvarende logoer -->
+    </div>
+
+
+</body>
+</html>
